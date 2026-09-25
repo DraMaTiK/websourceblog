@@ -1,0 +1,6 @@
+uploads/*
+!uploads/index.php
+!uploads/.htaccess
+cache/
+*.zip
+.DS_Store

@@ -1,0 +1,9 @@
+{
+  "name": "websource/websourceblog",
+  "description": "Blog orienté SEO pour PrestaShop : catégories, articles, tags, URLs réécrites, AVIF, lazyload, carousel d'accueil, publication antidatée.",
+  "type": "prestashop-module",
+  "license": "AFL-3.0",
+  "authors": [{ "name": "Websource", "homepage": "https://www.websource.fr" }],
+  "require": { "php": ">=7.4" },
+  "config": { "prepend-autoloader": false }
+}

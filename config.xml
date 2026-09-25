@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>websourceblog</name>
+	<displayName><![CDATA[Websource Blog]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Blog orienté SEO : catégories, articles, tags, URLs réécrites, images AVIF, lazyload, carousel d'accueil, publication antidatée.]]></description>
+	<author><![CDATA[Websource]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Supprimer le blog, ses articles et ses images ?]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>
