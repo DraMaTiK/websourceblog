@@ -51,3 +51,28 @@
     });
   });
 })();
+
+/* Vidéos d'article : image d'appel + pastille « lecture », la vidéo n'est chargée qu'au clic */
+(function () {
+  'use strict';
+  function ready(fn) { document.readyState !== 'loading' ? fn() : document.addEventListener('DOMContentLoaded', fn); }
+  ready(function () {
+    [].forEach.call(document.querySelectorAll('.wsb-video'), function (box) {
+      var video = box.querySelector('video');
+      if (!video || box.classList.contains('is-facade')) return;
+      video.removeAttribute('controls');
+      video.setAttribute('preload', 'none');
+      box.classList.add('is-facade');
+      var btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'wsb-play'; btn.setAttribute('aria-label', 'Lire la vidéo');
+      btn.innerHTML = '<span class="wsb-play-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><span class="wsb-play-label">Lire la vidéo</span>';
+      box.insertBefore(btn, box.firstChild);
+      btn.addEventListener('click', function () {
+        box.classList.remove('is-facade');
+        video.setAttribute('controls', '');
+        btn.parentNode && btn.parentNode.removeChild(btn);
+        var p = video.play(); if (p && p.catch) p.catch(function () {});
+      });
+    });
+  });
+})();
