@@ -107,3 +107,8 @@ a.wsb-page:hover { border-color: var(--wsb-gold); background: var(--wsb-cream); 
 /* titre de page */
 body.page-websourceblog .page-header h1 { position: relative; margin: 1.25rem 0 1.6rem; padding-bottom: .8rem; font-size: 1.45rem; letter-spacing: .04em; color: var(--ec-navy, #14224f); }
 body.page-websourceblog .page-header h1::after { content: ""; position: absolute; left: 0; bottom: 0; width: 48px; height: 3px; background: var(--ec-gold, #c9a24b); border-radius: 2px; }
+
+/* vidéo dans un article */
+.wsb-video { margin: 0 0 1.75rem; overflow: hidden; background: #000; border-radius: 10px; }
+.wsb-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--wsb-cream); }
+.wsb-video .wsb-caption { margin: 0; padding: .55rem .9rem; font-size: .8rem; color: #7a7f93; background: #fff; border: 1px solid var(--wsb-line); border-top: 0; border-radius: 0 0 10px 10px; }

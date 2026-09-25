@@ -40,6 +40,9 @@ class WebsourceBlogPostModuleFrontController extends WsbBaseFrontController
         }
         $post = $this->module->presentPost($row, true);
         $post['picture_hero'] = WsbImage::picture($post['image'], $post['image_alt'] ?: $post['title'], '(min-width: 992px) 760px, 100vw', true, 'wsb-hero-img');
+        if (strpos((string) $post['content_html'], 'wsb-video') !== false) {
+            $post['picture_hero'] = ''; // la vidéo en tête d'article remplace l'image de couverture
+        }
         $tags = WsbPost::getTags((int) $post['id_wsb_post'], $idLang);
         foreach ($tags as &$t) {
             $t['url'] = $this->module->getTagLink($t['link_rewrite'], 1, $idLang);
